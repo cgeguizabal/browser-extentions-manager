@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1.6rem;
+  background: var(--DarkGradient);
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.lightmode {
+  background: var(--LightGradient);
+
+  --Neutral800: var(--Neutral0);
+  --Neutral100: var(--Neutral900);
+  --Neutral700: var(--Neutral0);
+  --borderColour: hsl(217, 61%, 90%);
+  --textBtn: var(--Neutral900);
+  --removeBtn: var(--Neutral0);
+  --Red400: var(--Red700);
+  --shadow: var(--Neutral200);
+}

@@ -1,0 +1,14 @@
+.mainContainer {
+  display: grid;
+
+  grid-template-columns: minmax(1rem, 1fr) repeat(8, minmax(4rem, 15rem)) minmax(
+      1rem,
+      1fr
+    );
+  grid-template-rows: minmax(1rem, 1.5rem) min-content min-content min-content minmax(
+      1rem,
+      3rem
+    );
+  column-gap: 1rem;
+  row-gap: 3rem;
+}

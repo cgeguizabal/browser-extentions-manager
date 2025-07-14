@@ -1,0 +1,61 @@
+.navBarContainer {
+  grid-column: 2 / -2;
+  grid-row: 2;
+
+  background-color: var(--Neutral800);
+  height: 6rem;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0.5rem 0.5rem 10px 0 var(--shadow);
+}
+
+.logoContainer {
+  height: 3.4rem;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+}
+
+.logoText {
+  fill: var(--Neutral100);
+}
+
+.logoIcon {
+  fill: var(--Red500);
+}
+
+.icon {
+  border: none;
+  background-color: transparent;
+  border-radius: 1rem;
+
+  &_sun {
+    background-color: var(--Neutral700);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+
+  &_moon {
+    background-color: var(--moonBackground);
+    padding: 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    border: 1px solid var(--Red400);
+  }
+}

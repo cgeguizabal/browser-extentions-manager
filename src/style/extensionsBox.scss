@@ -1,0 +1,108 @@
+.extensionBoxContainer {
+  background-color: var(--Neutral800);
+  border-radius: 2rem;
+  border: 0.5px solid var(--borderColour);
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 41rem;
+
+  max-width: 41rem;
+  min-width: 20rem;
+
+  height: auto;
+  min-height: 20rem;
+
+  padding: 1.5rem;
+  display: flex;
+
+  box-shadow: 0.5rem 0.5rem 10px 0 var(--shadow);
+
+  &_inner {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.topContent {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+
+  &_image {
+    align-self: start;
+  }
+
+  &_title {
+    color: var(--textBtn);
+    font-size: 2rem;
+  }
+  &_text {
+    color: var(--Neutral100);
+    font-weight: 300;
+    font-size: 1.7rem;
+    margin-top: 1rem;
+  }
+}
+
+.bottomContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.5rem;
+
+  &_btn {
+    background-color: var(--Neutral800);
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--borderColour);
+    color: var(--textBtn);
+    border-radius: 3rem;
+    font-weight: 500;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--Red400);
+      color: var(--removeBtn);
+      border: none;
+    }
+  }
+
+  &_label {
+    background-color: var(--Neutral600);
+    width: 4rem;
+    height: 2.2rem;
+    border-radius: 1rem;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.25rem;
+      left: 0.15rem;
+      width: 1.7rem;
+      height: 1.7rem;
+      background-color: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+  }
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+input[type="checkbox"]:checked + .bottomContent_label {
+  background-color: var(--Red400);
+}
+
+input[type="checkbox"]:checked + .bottomContent_label::before {
+  transform: translateX(2rem);
+}

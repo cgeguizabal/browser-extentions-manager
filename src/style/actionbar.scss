@@ -1,0 +1,45 @@
+.actionBarContainer {
+  grid-column: 2 / -2;
+  grid-row: 3;
+
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3rem;
+  flex-wrap: wrap;
+}
+
+h2 {
+  color: var(--Neutral100);
+  font-size: 3rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 2rem;
+  border: none;
+  background-color: transparent;
+
+  &_btn {
+    padding: 1rem 1.8rem;
+    display: flex;
+    align-self: center;
+    border-radius: 3rem;
+    border: 0.5px solid var(--borderColour);
+    background-color: var(--Neutral700);
+    color: var(--textBtn);
+    box-shadow: 0.5rem 0.5rem 10px 0 var(--shadow);
+    font-size: 1.6rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--Red500);
+      color: var(--Neutral800);
+    }
+  }
+}
+
+.show {
+  background-color: var(--Red500);
+  color: var(--Neutral800);
+}

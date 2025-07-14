@@ -1,0 +1,8 @@
+.gridListContainer {
+  grid-column: 2 / -2;
+  grid-row: 4;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
