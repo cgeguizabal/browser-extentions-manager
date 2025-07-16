@@ -1,24 +1,54 @@
 import ExtensionBox from "./ExtensionBox";
-import data from "../data.json";
+
 import "../style/gridlistcontainer.scss";
 import useButtonStore from "../../store/buttonstore";
 
 function GridList() {
-  const { all, active, inactive } = useButtonStore();
-  const extensions = data.map((item) => ({ ...item }));
+  const { all, active, inactive, extensionsNew } = useButtonStore();
+  const extensions = extensionsNew.map((item) => ({ ...item }));
+  const activeExtensions = extensionsNew.filter((ext) => ext.isActive === true);
+  const inactiveExtensions = extensionsNew.filter(
+    (ext) => ext.isActive === false
+  );
   return (
     <>
       <div className="gridListContainer">
-        {extensions.map((item, index) => (
-          <ExtensionBox
-            key={index}
-            check={index}
-            logo={item.logo}
-            name={item.name}
-            text={item.description}
-            isActive={item.isActive}
-          />
-        ))}
+        {all &&
+          extensions.map((item, index) => (
+            <ExtensionBox
+              key={item.id}
+              id={item.id}
+              check={index}
+              logo={item.logo}
+              name={item.name}
+              text={item.description}
+              isActive={item.isActive}
+            />
+          ))}
+        {active &&
+          activeExtensions.map((item, index) => (
+            <ExtensionBox
+              key={item.id}
+              id={item.id}
+              check={index}
+              logo={item.logo}
+              name={item.name}
+              text={item.description}
+              isActive={item.isActive}
+            />
+          ))}
+        {inactive &&
+          inactiveExtensions.map((item, index) => (
+            <ExtensionBox
+              key={item.id}
+              id={item.id}
+              check={index}
+              logo={item.logo}
+              name={item.name}
+              text={item.description}
+              isActive={item.isActive}
+            />
+          ))}
       </div>
     </>
   );

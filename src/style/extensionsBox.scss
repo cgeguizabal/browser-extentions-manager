@@ -16,13 +16,22 @@
   display: flex;
 
   box-shadow: 0.5rem 0.5rem 10px 0 var(--shadow);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 
+  &.fade-out {
+    opacity: 0;
+    transform: scale(0.9);
+  }
   &_inner {
     width: 100%;
     min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+
+  @media (max-width: 55em) {
+    max-width: none;
   }
 }
 

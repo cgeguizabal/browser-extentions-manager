@@ -1,1 +1,10 @@
-
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  grid-column: 2 / -2;
+  grid-row: 5;
+  color: var(--Neutral100);
+}
+.attribution a {
+  color: var(--Red400);
+}
