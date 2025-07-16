@@ -56,13 +56,13 @@ function NavBar() {
           {lightMode ? (
             <img
               className="icon_moon"
-              src="/public/assets/images/icon-moon.svg"
+              src="/assets/images/icon-moon.svg"
               alt="sun"
             />
           ) : (
             <img
               className="icon_sun"
-              src="/public/assets/images/icon-sun.svg"
+              src="/assets/images/icon-sun.svg"
               alt="sun"
             />
           )}
